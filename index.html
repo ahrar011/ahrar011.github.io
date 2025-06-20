@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1158907381104331"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinate Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2 class="section-title">Coordinate Input</h2>
+            <label for="xCoord">X Coordinate</label>
+            <input type="number" id="xCoord" placeholder="Enter X">
+            <label for="yCoord">Y Coordinate</label>
+            <input type="number" id="yCoord" placeholder="Enter Y">
+            <div class="button-container">
+                <button class="btn primary" onclick="drawPoint()">Draw Point</button>
+                <button class="btn success" onclick="savePoint()">Save Point</button>
+                <button class="btn info" onclick="adjustCanvasSize()">Adjust Canvas Size</button>
+                <button class="btn danger" onclick="clearCanvas()">Clear Canvas</button>
+            </div>
+            <p id="status">Enter coordinates and click "Draw Point".</p>
+            <h3>Saved Points</h3>
+            <ul id="savedPointsList"></ul>
+        </div>
+        <div class="right">
+            <canvas id="canvas" width="500" height="400"></canvas>
+            <p id="mouseCoords">Click on the canvas to get mouse coordinates.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
